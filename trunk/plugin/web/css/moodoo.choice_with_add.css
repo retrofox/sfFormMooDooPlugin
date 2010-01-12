@@ -25,7 +25,7 @@ div.select_with_add div.btn_add div.icn {
   border: 1px solid #eee;
 }
 
-div.win_add2select, div.error_response {
+div.win_add2select, div.error_response, div.ok_list {
   position: absolute;
   width: 250px;
   left: 5px; top: 5px;
@@ -34,6 +34,23 @@ div.win_add2select, div.error_response {
   border: 1px solid #ccc;
   background: #eee;
   -moz-border-radius: 6px;
+}
+
+div.error_response {
+  padding: 2px 5px;
+  width: auto;
+  border-color: #D66;
+  background-color: #FAA;
+}
+
+div.ok_list {
+  top: -10px;
+  display: block;
+  padding: 3px 5px;
+  width: auto;
+  color: #060;
+  border-color: #6D6;
+  background-color: #EFE;
 }
 
 div.win_add2select div.icn {

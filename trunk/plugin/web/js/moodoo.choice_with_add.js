@@ -20,7 +20,6 @@ window.addEvent ('domready', function () {
 
 });
 
-
 var sfWidgetFromPropelWithAdd = new Class({
   Implements: [Events, Options],
   options: {
@@ -102,20 +101,35 @@ var sfWidgetFromPropelWithAdd = new Class({
       onSuccess: function(){
         this.json_data_server_response = $server_response;
         this.server_response = this.ajaxConex.response.html;
+
         $server_response = null;
 
         if (this.json_data_server_response.is_ok) {
           this.renderResponseOk();
+          this.disWin2Add();
         }
         else {
           this.renderResponseError();
         }
-        this.disWin2Add();
+        
       }.bind(this)
     });
   },
   renderResponseOk: function () {
-    this.input_select.set ('html', this.server_response);
+    var elResponse = new Element ('div', {
+      html: this.server_response
+    }).inject (this.element, 'top');
+
+    (function() {
+      elResponse.dispose();
+    }).delay(1000);
+
+    var htmlString = ''
+    this.json_data_server_response.options.each(function (option, iO) {
+      htmlString +='<option value="'+option.id+'"' + ((this.json_data_server_response.id_selected == option.id) ? '" selected="selected"' : '') + '>'+option.value+'</option>'+"\n"
+    }, this)
+
+    this.input_select.set('html', htmlString);
     this.input_select.focus();
   },
   renderResponseError: function () {
@@ -124,7 +138,6 @@ var sfWidgetFromPropelWithAdd = new Class({
     (function () {
       this.win_error.setStyle('display', 'none');
       this.win_error.empty();
-      this.enWin2Add();
     }.bind(this)).delay (2000);
   }
 });
