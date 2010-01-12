@@ -1,7 +1,7 @@
 sfFormMooDooPlugin
 =================
 
-The `sfFormMooDooPlugin` packages useful validators, widgets, and forms.
+The 'sfFormMooDooPlugin' packages useful validators, widgets, and forms.
 
 
 Installation
@@ -38,5 +38,5 @@ If you want to contribute a validator, a widget, or a form, follow these steps:
     * The contribution must not be too specific
     * You must be sure you will be able to maintain your contribution
   * Create a ticket and attach a patch
-    * Choose `sfFormMooDOoPlugin` as the component
-    * Change the qualification to `Ready for core team`
+    * Choose 'sfFormMooDooPlugin' as the component
+    * Change the qualification to 'Ready for core team'

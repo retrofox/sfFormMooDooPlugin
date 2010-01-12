@@ -1,5 +1,5 @@
 /* Global Styles */
-.error_list ul {
+div.select_with_add .error_list ul {
   font-size: 12px;
   margin: 0; padding: 1px;
   list-style: none;
@@ -7,14 +7,14 @@
 }
 
 /* buttons */
-.btn_add {
+div.select_with_add .btn_add {
   font-size: 12px;
   cursor: pointer;
   -moz-border-radius: 6px;
   background: #eee;
 }
 /* iconos */
-div.icn {
+div.select_with_add div.icn {
   width: 16px; height: 16px;
   -moz-border-radius: 4px;
   background-color: #FFF;
@@ -22,6 +22,6 @@ div.icn {
   background-repeat: no-repeat;
 }
 
-.icn_add                      { background-position:  -60px   0px; }
-.icn_ok                       { background-position:    0px   0px; }
-.icn_cancel                   { background-position: -200px   0px; }
+div.select_with_add .icn_add                { background-position:  -60px   0px; }
+div.select_with_add .icn_ok                 { background-position:    0px   0px; }
+div.select_with_add .icn_cancel             { background-position: -200px   0px; }

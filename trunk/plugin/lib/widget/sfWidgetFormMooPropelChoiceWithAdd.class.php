@@ -38,7 +38,7 @@ class sfWidgetFormMooPropelChoiceWithAdd extends  sfWidgetFormPropelChoice {
     $conten_tag.= '</div>';
 
     $conten_tag.= $select_tag;
-    $conten_tag.= '<div class="btn_add"><div class="icn icn-add"></div>';
+    $conten_tag.= '<div class="btn_add"><div class="icn icn_add"></div>';
     $conten_tag.= 'add';
     $conten_tag.= '</div>';
 
@@ -48,6 +48,7 @@ class sfWidgetFormMooPropelChoiceWithAdd extends  sfWidgetFormPropelChoice {
 	
   public function getStylesheets()
   {
+    die ('Muerte !!');
     return array(
       '/sfFormMooDooPlugin/css/moodoo.global.css' => 'all',
       '/sfFormMooDooPlugin/css/moodoo.choice_with_add.css' => 'all'
