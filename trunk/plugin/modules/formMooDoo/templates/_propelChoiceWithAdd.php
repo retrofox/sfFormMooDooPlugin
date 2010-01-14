@@ -19,6 +19,6 @@
   </div>
 <?php else : ?>
   <div class="error_list">
-  <?php echo $form_field->renderError() ?>
+  <?php echo $form_field->getError() ?>
   </div>
 <?php endif; ?>
